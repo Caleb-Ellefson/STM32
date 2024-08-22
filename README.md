@@ -1,6 +1,6 @@
 # STM32 Bare Metal Driver Development
 
-Welcome to the STM32 Lessons repository! This repository contains a collection of lessons and examples designed to help you learn and work with STM32 microcontrollers. Each lesson covers various aspects of STM32 programming, from basic concepts to more advanced features.
+Welcome to my STM32 repository! This collection showcases lessons from my STM32 Driver Development course. Each program is written entirely from scratch, with no reliance on external headers or libraries. The goal of this repository is to deepen my understanding of low-level driver development while creating a reference for future projects.
 
 Note: Not all lessons may be included in this repository, so lesson numbers might jump around. The purpose of this repository is to serve as a reference for future projects and development.
 

@@ -135,3 +135,15 @@ namespace Clock {
     inline void UART4_PCLK_DI()  { Registers::RCC->AHBENR &= ~(1 << 19); }
     inline void UART5_PCLK_DI()  { Registers::RCC->AHBENR &= ~(1 << 20); }
 }
+
+namespace Status {
+    constexpr uint8_t ENABLE = 1;
+    constexpr uint8_t DISABLE = 0;
+
+    constexpr uint8_t SET = ENABLE;
+    constexpr uint8_t RESET = DISABLE;
+
+    constexpr uint8_t GPIO_PIN_SET = SET;
+    constexpr uint8_t GPIO_PIN_RESET = RESET;
+    
+}

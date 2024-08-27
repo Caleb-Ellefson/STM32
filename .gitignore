@@ -1,0 +1,23 @@
+
+# Ignore build directory
+/bin/
+
+# Ignore object files and other build artifacts
+*.o
+*.a
+*.so
+*.exe
+
+# Ignore any temporary files created by the build process
+*.tmp
+*.log
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore operating system files
+.DS_Store
+Thumbs.db

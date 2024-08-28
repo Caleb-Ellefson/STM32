@@ -6,11 +6,13 @@ BUILD_DIR = bin
 
 # Source and Header Directories
 SRC_DIR = Src
+SRC_DRIVERS_DIR = Drivers/Src
 APP_INC_DIR = Inc            # Application headers
 DRIVER_INC_DIR = Drivers/Inc # Driver headers
 
 # Source Files
-CFILES = $(SRC_DIR)/Main.cpp # Adjust if you have more source files
+CFILES = $(SRC_DIR)/Main.cpp \
+         $(SRC_DRIVERS_DIR)/STM32F103xx-GPIO.cpp
 
 # Include Directories
 INCLUDES = -I$(APP_INC_DIR) -I$(DRIVER_INC_DIR)
@@ -30,7 +32,7 @@ LDFLAGS = -L$(OPENCM3_DIR)/lib
 
 # Source and Object Files
 SOURCES = $(CFILES)
-OBJECTS = $(SOURCES:$(SRC_DIR)/%.cpp=$(BUILD_DIR)/%.o)
+OBJECTS = $(SOURCES:%.cpp=$(BUILD_DIR)/%.o)
 
 # Build Targets
 all: $(BUILD_DIR)/$(PROJECT).elf
@@ -41,7 +43,7 @@ $(BUILD_DIR)/$(PROJECT).elf: $(OBJECTS)
 	$(CXX) $(OBJECTS) $(LDFLAGS) -o $@
 
 # Compile each .cpp file into an object file
-$(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
+$(BUILD_DIR)/%.o: %.cpp
 	@mkdir -p $(dir $@)  # Ensure the directory exists
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 

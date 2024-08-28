@@ -60,7 +60,7 @@ namespace Memory {
 
 namespace Registers {
 
-    struct GPIO_Reg_Def {
+    struct GPIO_Reg_Def_t {
         volatile uint32_t CRL;   // 0x00: Port Configuration Register Low
         volatile uint32_t CRH;   // 0x04: Port Configuration Register High
         volatile uint32_t IDR;   // 0x08: Port Input Data Register
@@ -70,29 +70,29 @@ namespace Registers {
         volatile uint32_t LCKR;  // 0x18: Port Configuration Lock Register
     };
 
-    struct RCC_Reg_Def {
-        volatile uint32_t CR;       	// 0x00: Clock Control Register
-        volatile uint32_t CFGR;     	// 0x04: Clock Configuration Register
-        volatile uint32_t CIR;      	// 0x08: Clock Interrupt Register
-        volatile uint32_t APB2RSTR; 	// 0x0C: APB2 Peripheral Reset Register
-        volatile uint32_t APB1RSTR; 	// 0x10: APB1 Peripheral Reset Register
-        volatile uint32_t AHBENR;   	// 0x14: AHB Peripheral Clock Enable Register
-        volatile uint32_t APB2ENR;  	// 0x18: APB2 Peripheral Clock Enable Register
-        volatile uint32_t APB1ENR;  	// 0x1C: APB1 Peripheral Clock Enable Register
-        volatile uint32_t BDCR;     	// 0x20: Backup Domain Control Register
-        volatile uint32_t CSR;      	// 0x24: Control/Status Register
+    struct RCC_Reg_Def_t {
+        volatile uint32_t CR;           // 0x00: Clock Control Register
+        volatile uint32_t CFGR;         // 0x04: Clock Configuration Register
+        volatile uint32_t CIR;          // 0x08: Clock Interrupt Register
+        volatile uint32_t APB2RSTR;     // 0x0C: APB2 Peripheral Reset Register
+        volatile uint32_t APB1RSTR;     // 0x10: APB1 Peripheral Reset Register
+        volatile uint32_t AHBENR;       // 0x14: AHB Peripheral Clock Enable Register
+        volatile uint32_t APB2ENR;      // 0x18: APB2 Peripheral Clock Enable Register
+        volatile uint32_t APB1ENR;      // 0x1C: APB1 Peripheral Clock Enable Register
+        volatile uint32_t BDCR;         // 0x20: Backup Domain Control Register
+        volatile uint32_t CSR;          // 0x24: Control/Status Register
     };
 
-    // Peripheral Definitions (Peripheral base addresses typecasted to xxx_Reg_Def)
-    inline GPIO_Reg_Def* const GPIOA = reinterpret_cast<GPIO_Reg_Def*>(Memory::GPIOA_BASEADDR);
-    inline GPIO_Reg_Def* const GPIOB = reinterpret_cast<GPIO_Reg_Def*>(Memory::GPIOB_BASEADDR);
-    inline GPIO_Reg_Def* const GPIOC = reinterpret_cast<GPIO_Reg_Def*>(Memory::GPIOC_BASEADDR);
-    inline GPIO_Reg_Def* const GPIOD = reinterpret_cast<GPIO_Reg_Def*>(Memory::GPIOD_BASEADDR);
-    inline GPIO_Reg_Def* const GPIOE = reinterpret_cast<GPIO_Reg_Def*>(Memory::GPIOE_BASEADDR);
-    inline GPIO_Reg_Def* const GPIOF = reinterpret_cast<GPIO_Reg_Def*>(Memory::GPIOF_BASEADDR);
-    inline GPIO_Reg_Def* const GPIOG = reinterpret_cast<GPIO_Reg_Def*>(Memory::GPIOG_BASEADDR);
+    // Peripheral Definitions (Peripheral base addresses typecasted to xxx_Reg_Def_t)
+    inline GPIO_Reg_Def_t* const GPIOA = reinterpret_cast<GPIO_Reg_Def_t*>(Memory::GPIOA_BASEADDR);
+    inline GPIO_Reg_Def_t* const GPIOB = reinterpret_cast<GPIO_Reg_Def_t*>(Memory::GPIOB_BASEADDR);
+    inline GPIO_Reg_Def_t* const GPIOC = reinterpret_cast<GPIO_Reg_Def_t*>(Memory::GPIOC_BASEADDR);
+    inline GPIO_Reg_Def_t* const GPIOD = reinterpret_cast<GPIO_Reg_Def_t*>(Memory::GPIOD_BASEADDR);
+    inline GPIO_Reg_Def_t* const GPIOE = reinterpret_cast<GPIO_Reg_Def_t*>(Memory::GPIOE_BASEADDR);
+    inline GPIO_Reg_Def_t* const GPIOF = reinterpret_cast<GPIO_Reg_Def_t*>(Memory::GPIOF_BASEADDR);
+    inline GPIO_Reg_Def_t* const GPIOG = reinterpret_cast<GPIO_Reg_Def_t*>(Memory::GPIOG_BASEADDR);
 
-    inline RCC_Reg_Def* const RCC = reinterpret_cast<RCC_Reg_Def*>(Memory::RCC_BASEADDR);
+    inline RCC_Reg_Def_t* const RCC = reinterpret_cast<RCC_Reg_Def_t*>(Memory::RCC_BASEADDR);
 }
 
 // Peripheral Clock Enable/Disable Macros
@@ -146,4 +146,4 @@ namespace Status {
     constexpr uint8_t GPIO_PIN_SET = SET;
     constexpr uint8_t GPIO_PIN_RESET = RESET;
     
-}
+};

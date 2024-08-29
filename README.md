@@ -1,3 +1,8 @@
+# Welcome
+Welcome to my STM32 Baremetal driver repository. These lessons serve as a reference and summary of my work in baremetal driver development, providing clear, concise examples and explanations to support your understanding and growth in STM32 programming.
+
+
+
 ## Table of Contents
 
 1. [Lesson 1: Understanding MCU Clock Tree](#lesson-1-understanding-mcu-clock-tree)

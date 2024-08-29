@@ -1,5 +1,5 @@
 # Welcome
-Welcome to my STM32 Baremetal driver repository. These lessons serve as a reference and summary of my work in baremetal driver development, providing clear, concise examples and explanations to support your understanding and growth in STM32 programming.
+Welcome to my STM32 Baremetal driver repository. These lessons serve as a reference and summary of my work in baremetal driver development, providing clear, concise examples and explanations to support understandingh in baremetal programming.
 
 
 
